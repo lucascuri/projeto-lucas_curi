@@ -1,0 +1,138 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #e0e80d;
+	box-sizing: border-box;
+	}
+
+	/* TODO O CONTEUDO HTML */
+
+	.all {
+		width: 350px;
+		margin: 0 auto;
+	}
+
+	/* LOGO */
+
+	.logo {
+		margin-left: 29%;
+		margin-top: 60px;
+	}
+
+	.logo h3 {
+		font-size: 18px;
+		margin-top: 8px;
+		text-transform: uppercase;
+	}
+
+	/* CAMPOS DE FORMULÁRIO */
+
+	.campos {
+		margin-top: 60px;
+	}
+
+	.campos label {
+		display: block; 
+		margin-top: 3%;
+		margin-bottom: 15px;
+		color: rgb(0, 54, 52);
+		font-weight: bold;
+	}
+
+	.campos input {
+		font-size: 15px;
+		padding: 13px;
+		width: 93%;
+		border-radius: 5px;
+		border: 1px solid #e0e80d;
+		height: 25px;
+		box-shadow: 1px 1px 1px rgb(204, 211, 158);
+	}
+
+	.campos input::placeholder {
+		color: #AAA;
+	}
+
+	#c2 {
+		margin-top: 35px;
+	}
+	/* BOTÃO ENTRAR */
+
+	#entrar {
+		background-color: #b4bb07;
+		font-size: 15px;
+		width: 250px;
+		height: 60px;
+		color: white;
+		border-radius: 5px;
+		border-style: none;
+		margin-top: 50px;
+		margin-left: 16%;
+		cursor: pointer;
+		font-size: 18px;
+		box-shadow: 1px 1px 1px rgb(140, 145, 8);
+	}
+
+	/* H4 REDIRECIONAMENTO PARA O CADASTRO */
+
+	.redirect {
+		color: rgb(132, 137, 13);
+		margin-top: 50px;
+		text-align: center;
+		font-size: 17px;
+	}
+
+	.redirect a {
+		color: black;
+		font-weight: bold;
+		text-decoration: none;
+		border-bottom: solid 1px rgb(132, 137, 13);
+	}
+
+
+
+	/* RODAPÉ DA PÁGINA */
+
+	.rodape {
+		bottom: 0;
+		position: fixed;
+		margin-top: 70px;
+		background: white;
+		padding: 40px 0px;
+		width: 100%;
+	}
+
+	.rodape p {
+
+		text-align: center;
+		font-weight: bold;
+
+	}
+
+	.erro {
+		border: 3px solid red;
+	}
+
+	@media screen and (max-width: 400px) {
+		
+
+		.logo {
+		margin-left: 30%;
+	}
+
+	.campos label {
+		margin-left: 3%;
+	}
+
+	.campos input {
+		
+		width: 87%;
+		margin-left: 3%;
+	}
+
+	#entrar {
+		
+		margin-left: 15%;
+		
+	}
+
+	}
