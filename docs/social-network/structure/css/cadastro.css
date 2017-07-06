@@ -5,7 +5,7 @@ body {
 
     #header {
         background-color: #e0e80d;
-        height: 148px;
+        height: 150px;
         margin: 0 auto;
     }
 
@@ -105,12 +105,12 @@ body {
 
     #footer {
         background-color: #e0e80d;
-        padding: 40px 0px;
+        padding: 36px 0px;
         display: flex;
         justify-content: center;
-        position: fixed;
         bottom: 0;
         width: 100%;
+        margin-top: 215px;
     }
 
     #footer p {
@@ -118,31 +118,39 @@ body {
     }
 
     .erro {
-        border: 3px solid red;
+        border: 1px solid red;
     }
 
     @media screen and (max-width: 800px) {
 
         #header {
-        
             margin: 0 auto;
-            height: 150px;
+            height: 210px;
         }
 
-        #header-logo{
+        #header-logo {
             position: relative;
-            width: 106px;
+            max-width: 106px;
             margin: 0 auto;
         }
 
-        #titulo{
+        #header-logo h4 {
+            padding-top: 5px;
+        }
+
+        #header-logo img {
+            padding-top: 30px;
+        }
+
+        #titulo {
             padding: 0;
+            padding-top: 30px;
         }
 
         #content {
-            max-width: 380px;
+            max-width: 680px;
             margin: 0px 4% 0px 4%;
-            }
+        }
 
         label {
             display: flex;
@@ -168,6 +176,6 @@ body {
 
         #footer{
             bottom: 0;
-            
+            position: fixed;
         }
     }
