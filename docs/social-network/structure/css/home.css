@@ -5,6 +5,7 @@ body {
 }
 
 textarea {
+	font-family: 'Open Sans', sans-serif;
 	width: 420px;
 	height: 156px;
 	background-color: #ececec;
