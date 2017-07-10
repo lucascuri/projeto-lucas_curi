@@ -88,8 +88,8 @@ $("#formulario").on("submit", function() {
 			alert("Cadastro realizado com sucesso!");
 			
 		},
-		error: function(erro) {
-			alert(erro.message);
+		error: function(xhr) {
+			alert(xhr.responseJSON.error.message);
 		}	
 });
 	return false;

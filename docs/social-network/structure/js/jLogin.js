@@ -5,21 +5,24 @@ $("#formulario").on("submit", function() {
 	var senha = $("[name = senha]").val();
 
 	// VALIDAÇÕES //
-
 	
 	if (email == "" || senha == "") {
 			if (email == "") {
+			alert("Por favor, preencha o campo de e-mail");
 			$("[name = email]").addClass('erro');
+			return false;
 		} else {
 			$("[name = email]").removeClass('erro');
 		}
 		
 		if (senha == "") {
+			alert("Por favor, preencha o campo de senha");
 			$("[name = senha]").addClass('erro');
+			return false;
 		} else {
 			$("[name = senha]").removeClass('erro');
-		}
-		return false;
+		}	
+		
 	}
 
 	var data = {	
@@ -32,7 +35,19 @@ $("#formulario").on("submit", function() {
 		url: "http://realizadigital-api.nodo.cc/login",
 		data: data,
 		success: function(res) {
+
+			var toSave =  {
+			password: data.password,
+			email: data.email,
+			id: res.id,
+			age: res.age
+
+			};
+
+			localStorage.setItem('toSave', JSON.stringify(toSave));
+			
 			alert("Login realizado com sucesso!");
+			window.location = 'home.html';
 			
 		},
 		error: function(xhr) {
