@@ -1,155 +1,218 @@
-﻿body {
+body {
 	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
-	background-color: #F9F9F9;
+	background-color: #f9f9f9;
 }
 
 textarea {
-	resize: none;
-	background-color: #eee;
-	width: 390px;
-	height: 150px;
-	border-style: none;
+	font-family: 'Open Sans', sans-serif;
+	width: 420px;
+	height: 156px;
+	background-color: #ececec;
+	margin-top: 20px;
 	border-radius: 4px;
-	margin-top: 15px;
-}
-
-label {
-	padding-bottom: 20px;
+	resize: none;
+	border-style: none;
 }
 
 input[type=submit] {
-	float: right;
 	margin-top: 20px;
 	width: 130px;
 	height: 45px;
-	background-color: #B4BB07;
-	border-radius: 4px;
+	background-color: #b0b427;
 	color: white;
+	font-size: 15px;
+	float: right;
+	border-radius: 4px;
 	border-style: none;
-	font-size: 14px;
+	cursor: pointer;
+	font-weight: 300;
 }
 
 #header {
-	background-color: #e5d639;
-	height: 57px;
+	background-color: #e5d549;
+	height: 58px;
 }
 
 #header-logo {
-	position: absolute;
-	margin-top: 12.5px;
-	margin-left: 45px;
+	margin-left: 55px;
+	padding-top: 10px;
+	display: flex;
+	align-items: center;
 }
 
-#header-logo h3 {
-	position: relative;
-	left: 10px;
-	bottom: 14px;
-	display: inline-block;
-	color: black;
-	font-weight: bold;
+#header-logo h4 {
+	align-items: center;
+	padding-left: 10px;
 	font-size: 18px;
+	font-weight: bold;
+	color: #082b2c;
 }
 
 #content {
-	max-width: 800px;
+	width: 800px;
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 25px;
 }
 
-#top-home {
+#top-content {
 	display: flex;
 }
 
 #perfil {
-	background-color: white;
-	width: 40%;
+	width: 37.5%;
 	height: 300px;
+	box-shadow: 0px 2px 1px rgba(25, 25, 25, 0.25);
 	border-radius: 4px;
-	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
-
 }
 
 #perfil-inside {
-	max-width: 275px;
-	margin: 0 auto;
 	padding: 20px;
 }
 
 #perfil-inside h4 {
 	text-align: center;
+	
+	font-size: 18px;
+	color: #082b2c;
+}
 
+#perfil-inside h1 {
+	font-size: 50px;
 }
 
 #avatar {
-	background-color: #e5d639;
-	width: 110px;
-	height: 110px;
+	width: 115px;
+	height: 115px;
+	background-color: #e5d549;
 	border-radius: 100%;
-	margin: 0 auto;
-	margin-top: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 68px;
+	margin-top: 20px;
 }
 
-#avatar h2 {
-	padding-top: 25px;
-	text-align: center;
-	font-size: 45px;
+
+#avatar h1 {
+	color: #082b2c;
 }
 
 #perfil-rodape {
-	margin-top: 20px;
-	border-top: 1px solid #eee;
+	margin-top: 25px;
+	border-top: 1px solid #DCDCDC;
 }
 
-#perfil-rodape img {
-	float: right;
+#perfil-rodape p {
+	color: #082b2c;
+	font-size: 14px;
 }
 
-.paragraph-rodape {
-	padding-top: 25px;
+#paragraph-rodape {
+	padding-top: 20px;
 }
 
-.paragraph-rodape2 {
+#paragraph-rodape2 {
 	padding-top: 10px;
 }
 
-#post {
-	background-color: white;
-	width: 57%;
-	margin-left: 3%;
-	height: 300px;
-	border-radius: 4px;
-	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+#perfil-rodape a {
 	float: right;
+	position: relative;
+	
+}
+
+#post {
+	height: 300px;
+	width: 59.4%;
+	margin-left: 3.1%;
+	box-shadow: 0px 2px 1px rgba(25, 25, 25, 0.25);
+	border-radius: 4px;
 }
 
 #post-inside {
-	padding: 30px;
-	max-width: 420px;
+	padding: 20px 25px;
 }
 
-.blocos-feed{
-	background-color: white;
-	width: 800px;
-	height: 180px;
+#post-inside label {
+	font-size: 18px;
+	color: #082b2c;
+}
+
+.feeds {
 	border-radius: 4px;
-	box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 2px 1px rgba(25, 25, 25, 0.25);
 	margin-top: 30px;
-
 }
 
-.blocos-feed-inside {
-	background-color: white;
-	max-width: 760px;
-	margin: 0 auto;
-	padding: 20px;
+.feeds-inside {
+	padding: 20px 55px 20px 20px;
 }
 
+.feeds-inside h4 {
+	display: inline;
+	font-size: 15px;
+	font-weight: 600;
+}
+.feeds-inside h6 {
+	display: inline;
+	font-size: 12px;
+	color: #868686;
+}
+.feeds-inside p {
+	padding-top: 20px;
+	font-size: 14px;
+	line-height: 1.7em;
+}
 
-
-
-.likes {
-	margin-top: 20px;
+.span {
+	position: relative;
 	float: right;
+	left: 10px;
+	
 }
 
+.span span {
+	position: relative;
+	right: 10px;
+	bottom: 2px;
+	font-weight: bold;
+}
+
+
+	@media only screen and (max-width: 815px) {
+		#header-logo {
+			margin-left: 0px;
+			justify-content: center;
+		}
+
+		#content {
+			margin-top: 25px;
+			width: 100%;
+		}
+
+		#top-content {
+			flex-direction: column;
+		}
+
+		textarea {
+			width: 100%;
+		}
+
+		#perfil, #post, .feeds {
+			width: 90%;
+			margin-left: 5%;
+		}
+		
+		#post, .feeds {
+			margin-top: 25px;
+		}
+
+		#avatar {
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+
+
+
+	}	

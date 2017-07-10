@@ -29,7 +29,7 @@ $("#formulario").on("submit", function() {
 
 	$.ajax({
 		type: "post",
-		url: "http://192.168.20.91:8085/login",
+		url: "http://realizadigital-api.nodo.cc/login",
 		data: data,
 		success: function(res) {
 			alert("Login realizado com sucesso!");
