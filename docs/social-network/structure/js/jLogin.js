@@ -36,17 +36,9 @@ $("#formulario").on("submit", function() {
 		data: data,
 		success: function(res) {
 
-			var toSave =  {
-			password: data.password,
-			email: data.email,
-			id: res.id,
-			age: res.age
-
-			};
-
-			localStorage.setItem('toSave', JSON.stringify(toSave));
-			
-			alert("Login realizado com sucesso!");
+			var userData = res;
+			userData.password = data.password;
+			localStorage.setItem('userData', JSON.stringify(userData));
 			window.location = 'home.html';
 			
 		},
