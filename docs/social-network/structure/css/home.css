@@ -165,18 +165,25 @@ input[type=submit] {
 	line-height: 1.7em;
 }
 
-.span {
+.likes {
 	position: relative;
 	float: right;
 	left: 10px;
 	
 }
 
-.span span {
+.likes span {
 	position: relative;
 	right: 10px;
 	bottom: 2px;
 	font-weight: bold;
+}
+
+.erro {
+	text-align: center;
+	font-size: 30px;
+	margin-top: 30px;
+	color: red;
 }
 
 
