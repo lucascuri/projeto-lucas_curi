@@ -13,6 +13,8 @@ textarea {
 	border-radius: 4px;
 	resize: none;
 	border-style: none;
+	text-indent: 15px;
+	padding: 5px 5px 0 5px;
 }
 
 input[type=submit] {
@@ -32,6 +34,10 @@ input[type=submit] {
 #header {
 	background-color: #e5d549;
 	height: 58px;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	z-index: 999999999999999999999999999999999999999999999999999999999999;
 }
 
 #header-logo {
@@ -52,17 +58,18 @@ input[type=submit] {
 #content {
 	width: 800px;
 	margin: 0 auto;
-	margin-top: 25px;
+	margin-top: 60px;
 }
 
 #top-content {
 	display: flex;
+	margin-top: 60px;
 }
 
 #perfil {
 	width: 37.5%;
 	height: 300px;
-	box-shadow: 0px 2px 1px rgba(25, 25, 25, 0.25);
+	box-shadow: 0px 2px 1px 0px rgba(25, 25, 25, 0.15);
 	border-radius: 4px;
 }
 
@@ -72,9 +79,9 @@ input[type=submit] {
 
 #perfil-inside h4 {
 	text-align: center;
-	
+	font-weight: 600;
 	font-size: 18px;
-	color: #082b2c;
+	color: rgba(5, 50, 51, 0.90);
 }
 
 #perfil-inside h1 {
@@ -95,7 +102,9 @@ input[type=submit] {
 
 
 #avatar h1 {
-	color: #082b2c;
+	color: rgba(5, 50, 51, 0.90);
+	font-weight: 600;
+	text-transform: uppercase;
 }
 
 #perfil-rodape {
@@ -104,8 +113,13 @@ input[type=submit] {
 }
 
 #perfil-rodape p {
-	color: #082b2c;
+	color: rgba(5, 50, 51, 0.90);
 	font-size: 14px;
+}
+
+.p-rodape {
+	color: rgba(5, 50, 51, 0.90);
+	font-weight: 600;
 }
 
 #paragraph-rodape {
@@ -119,14 +133,13 @@ input[type=submit] {
 #perfil-rodape a {
 	float: right;
 	position: relative;
-	
 }
 
 #post {
 	height: 300px;
 	width: 59.4%;
 	margin-left: 3.1%;
-	box-shadow: 0px 2px 1px rgba(25, 25, 25, 0.25);
+	box-shadow: 0px 2px 1px 0px rgba(25, 25, 25, 0.15);
 	border-radius: 4px;
 }
 
@@ -136,17 +149,18 @@ input[type=submit] {
 
 #post-inside label {
 	font-size: 18px;
-	color: #082b2c;
+	color: rgba(5, 50, 51, 0.90);
+	font-weight: 600;
 }
 
 .feeds {
 	border-radius: 4px;
-	box-shadow: 0px 2px 1px rgba(25, 25, 25, 0.25);
+	box-shadow: 0px 2px 1px 0px rgba(25, 25, 25, 0.15);
 	margin-top: 30px;
 }
 
 .feeds-inside {
-	padding: 20px 55px 20px 20px;
+	padding: 20px 20px 20px 20px;
 }
 
 .feeds-inside h4 {
@@ -165,25 +179,48 @@ input[type=submit] {
 	line-height: 1.7em;
 }
 
+#feed-content {
+	margin-bottom: 25px;
+}
+
 .likes {
-	position: relative;
-	float: right;
-	left: 10px;
-	
+	display: flex;
+	justify-content: flex-end;
 }
 
 .likes span {
 	position: relative;
 	right: 10px;
-	bottom: 2px;
+	top: 10px;
 	font-weight: bold;
 }
 
+.icon-like {
+	background-image: url(../img/icon-like.png);
+	width: 30px;
+	height: 26px;
+	cursor: pointer;
+}
+
+.icon-like-active {
+	background-image: url(../img/icon-like-active.png);
+}
+
+
 .erro {
-	text-align: center;
-	font-size: 30px;
-	margin-top: 30px;
-	color: red;
+	background-color: #F08080;
+}
+
+.feed-name {
+	display: inline;
+	font-size: 15px;
+	font-weight: 600;
+	color: rgba(5, 50, 51, 0.90);
+}
+.feed-texto {
+	padding-top: 20px;
+	font-size: 14px;
+	line-height: 1.7em;
 }
 
 
