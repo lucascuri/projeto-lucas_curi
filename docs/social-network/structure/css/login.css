@@ -84,6 +84,7 @@ body {
 		text-align: center;
 		font-size: 20px;
 		font-weight: bold;
+		margin-bottom: 80px;
 	}
 
 	.redirect a {
@@ -96,7 +97,7 @@ body {
 
 	.rodape {
 		bottom: 0;
-		position: fixed;
+		position: relative;
 		background: white;
 		padding: 37px 0px;
 		width: 100%;
@@ -117,22 +118,22 @@ body {
 
 		.logo {
 		margin-left: 30%;
-	}
+		}
 
-	.campos label {
-		margin-left: 3%;
-	}
+		.campos label {
+			margin-left: 3%;
+		}
 
-	.campos input {
-		
-		width: 87%;
-		margin-left: 3%;
-	}
+		.campos input {
+			
+			width: 87%;
+			margin-left: 3%;
+		}
 
-	#entrar {
-		
-		margin-left: 15%;
-		
-	}
+		#entrar {
+			
+			margin-left: 15%;
+			
+		}
 
 	}

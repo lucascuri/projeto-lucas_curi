@@ -6,7 +6,7 @@ $("#formulario").on("submit", function() {
 
 	// VALIDAÇÕES //
 	
-	if (email == "" || senha == "") {
+	if (email === "" || senha === "") {
 			if (email == "") {
 			alert("Por favor, preencha o campo de e-mail");
 			$("[name = email]").addClass('erro');
@@ -15,7 +15,7 @@ $("#formulario").on("submit", function() {
 			$("[name = email]").removeClass('erro');
 		}
 		
-		if (senha == "") {
+		if (senha === "") {
 			alert("Por favor, preencha o campo de senha");
 			$("[name = senha]").addClass('erro');
 			return false;

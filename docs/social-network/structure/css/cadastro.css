@@ -42,7 +42,7 @@ body {
         max-width: 800px;
         margin: 0 auto;
         margin-top: 60px;
-        margin-bottom: 350px;
+        margin-bottom: 250px;
     }
 
     #formulario {
@@ -111,8 +111,7 @@ body {
         justify-content: center;
         bottom: 0;
         width: 100%;
-        margin-top: 215px;
-        position: fixed;
+        position: relative;
     }
 
     #footer p {
@@ -177,7 +176,7 @@ body {
         }
 
         #footer{
-            bottom: 0;
-            position: fixed;
+            position: relative;
+            top: 780px;
         }
     }

@@ -1,4 +1,6 @@
 
+
+
 $("#formulario").on("submit", function() {
 	var nome = $("[name = nome]").val();
 	var sbnome = $("[name = sbnome]").val();
@@ -10,64 +12,49 @@ $("#formulario").on("submit", function() {
 	var senha = $("[name = senha]").val();
 
 	// VALIDAÇÕES //
-
-	if (nome == "") {
-		alert("Por favor, preencha o campo nome corretamente");
-		$("[name = nome]").addClass('erro');
+	if (nome === "" || sbnome === "" || email === "" || idade === "" || cpf === "" || cep === "" || endereco === "" || senha === "") {
+		if (nome === "") {
+			$("[name = nome]").addClass('erro');
+		} else {
+			$("[name = nome]").removeClass('erro');
+		}
+		if (sbnome === "") {
+			$("[name = sbnome]").addClass('erro');
+		} else {
+			$("[name = sbnome]").removeClass('erro');
+		}
+		if (email === "") {
+			$("[name = email]").addClass('erro');
+		} else {
+			$("[name = email]").removeClass('erro');
+		}
+		if (idade === "" || idade <= 0 || idade > 110) {
+			$("[name = idade]").addClass('erro');
+		} else {
+			$("[name = idade]").removeClass('erro');
+		}
+		if (cpf === "") {
+			$("[name = cpf]").addClass('erro');
+		} else {
+			$("[name = cpf]").removeClass('erro');
+		}
+		if (cep === "") {
+			$("[name = cep]").addClass('erro');
+		} else {
+			$("[name = cep]").removeClass('erro');
+		}
+		if (endereco === "") {
+			$("[name = endereco]").addClass('erro');
+		} else {
+			$("[name = endereco]").removeClass('erro');
+		}
+		if (senha === "") {
+			$("[name = senha]").addClass('erro');
+		} else {
+			$("[name = senha]").removeClass('erro');
+		}
 		return false;
-	} else {
-		$("[name = nome]").removeClass('erro');
 	}
-	if (sbnome == "") {
-		alert("Por favor, preencha o campo de sobrenome corretamente");
-		$("[name = sbnome]").addClass('erro');
-		return false;
-	} else {
-		$("[name = sbnome]").removeClass('erro');
-	}
-	if (email == "") {
-		alert("Por favor, preencha o campo de email corretamente");
-		$("[name = email]").addClass('erro');
-		return false;
-	} else {
-		$("[name = email]").removeClass('erro');
-	}
-	if (idade == "") {
-		alert("Por favor, preencha o campo de idade corretamente");
-		$("[name = idade]").addClass('erro');
-		return false;
-	} else {
-		$("[name = idade]").removeClass('erro');
-	}
-	if (cpf == "") {
-		alert("Por favor, preencha o campo de CPF corretamente");
-		$("[name = cpf]").addClass('erro');
-		return false;
-	} else {
-		$("[name = cpf]").removeClass('erro');
-	}
-	if (cep == "") {
-		alert("Por favor, preencha o campo de CEP corretamente");
-		$("[name = cep]").addClass('erro');
-		return false;
-	} else {
-		$("[name = cep]").removeClass('erro');
-	}
-	if (endereco == "") {
-		alert("Por favor, preencha o campo de endereço corretamente");
-		$("[name = endereco]").addClass('erro');
-		return false;
-	} else {
-		$("[name = endereco]").removeClass('erro');
-	}
-	if (senha == "") {
-		alert("Preencha o campo de senha corretamente");
-		$("[name = senha]").addClass('erro');
-		return false;
-	} else {
-		$("[name = senha]").removeClass('erro');
-	}
-	
 	
 	var data = {
 		first_name: nome,
@@ -86,7 +73,7 @@ $("#formulario").on("submit", function() {
 		data: data,
 		success: function(res) {
 			alert("Cadastro realizado com sucesso!");
-			
+			window.location = 'login.html'
 		},
 		error: function(xhr) {
 			alert(xhr.responseJSON.error.message);
@@ -94,4 +81,9 @@ $("#formulario").on("submit", function() {
 });
 	return false;
 });
+
+// mask input //
+
+$('#cep').mask('99999-999');
+$('#cpf').mask('999.999.999-99');
 

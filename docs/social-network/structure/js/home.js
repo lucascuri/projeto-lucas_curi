@@ -10,6 +10,8 @@ function loadUserData() {
 
 }
 
+
+
 function loadFeeds() {
 	var wrapper = $("#feed-content");
 	user_id = userData.id;
@@ -20,7 +22,7 @@ function loadFeeds() {
 			var posts = res.posts;
 			var html = "";
 			if (posts.length === 0) {
-				html = "<div class='feed'><p>Não há novos posts no momento.</p></div>";
+				html = "<div class='feeds'><div class='feeds-inside>'<p class='noPosts'>Não há novos posts no momento.</p></div></div>";
 			} else {
 				posts.reverse();
 				for (i=0; i<posts.length; i++) {
@@ -29,7 +31,7 @@ function loadFeeds() {
 					} else {
 						icon = "<span class='icon-like' data-post-id='"+posts[i].post_id+"'></span>";
 					}
-					html = html + "<div class='feeds'><div class='feeds-inside'><h4 class='feed-name'>" + posts[i].first_name + " " + posts[i].last_name + "<p class='feed-texto'>" + posts[i].text + "</p><div class='likes'><span class='span-likes'>" + posts[i].likes + "</span>"+icon+"</div></div></div>";
+					html = html + "<div class='feeds'><div class='feeds-inside'><h4 class='feed-name'>" + posts[i].first_name + " " + posts[i].last_name + "<p class='feed-texto'>" + posts[i].text + "</p><div class='likes'><span class='span-like'>" + posts[i].likes + "</span>"+icon+"</div></div></div>";
 				}
 			}
 			wrapper.html(html);
@@ -81,7 +83,8 @@ $('body').on('click', '.icon-like', function(){
 			},
 			success: function(res) {
 				var num = res.likes;
-				element.parent().find('.span-likes').text(num);
+				element.parent().find('.span-like').text(num);
+				console.log(num);
 				element.removeClass('icon-like-active');
 			}
 		});
@@ -96,11 +99,21 @@ $('body').on('click', '.icon-like', function(){
 			},
 			success: function(res) {
 				var num = res.likes;	
-				element.parent().find('span-likes').text(num);
+				element.parent().find('.span-like').text(num);
+				console.log(num);
 				element.addClass('icon-like-active');
 			}
 		});
 	}
+});
+
+$('.refresh').on('click', function(){
+	location.reload();
+});
+
+$('.exit').on('click', function(){
+	localStorage.removeItem('userData');
+	location.reload();
 });
 
 function init() {
