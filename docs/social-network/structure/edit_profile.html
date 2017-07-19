@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <title></title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="css/reset.css">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="css/edit_profile.css">
+        </head>
+        <body>
+
+            <div id="header">
+                <div id="header-logo">
+                    <img id="logo" src="img/logo.png" alt="Logo da Realiza Digital">
+                    <h4>Social Network</h4>
+                </div>
+
+                <h2 id="titulo">Atualização do Cadastro</h2>
+            </div>
+
+            <div id="content">
+
+                    <form id="formulario">
+
+                        <label for="nome" class="p48">
+                            <span>Nome:</span>
+                            <input type="text" name="nome" id="nome" placeholder="Digite aqui seu nome">
+                        </label>
+
+                        <label for="sbnome" class="p48">
+                            <span>Sobrenome:</span>
+                            <input type="text" name="sbnome" id="sbnome" placeholder="Digite aqui seu sobrenome">
+                        </label>
+
+                        <label for="email" class="p48">
+                            <span>E-mail:</span>
+                            <input type="text" name="email" id="email" placeholder="E-mail não pode ser alterado" readonly="true">
+                        </label>
+
+                        <label for="idade" class="p23">
+                            <span>Idade:</span>
+                            <input type="text" name="idade" id="idade" placeholder="Digite aqui sua idade">
+                        </label>
+
+                        <label for="cpf" class="p23">
+                            <span>CPF:</span>
+                            <input type="text" name="cpf" id="cpf" placeholder="Digite aqui seu CPF">
+                        </label>
+
+                        <label for="cep" class="p23">
+                            <span>CEP:</span>
+                            <input type="text" name="cep" id="cep" placeholder="Digite aqui seu CEP">
+                        </label>
+
+                        <label for="endereco" class="p48">
+                            <span>Endereço:</span>
+                            <input type="text" name="endereco" id="endereco" placeholder="Digite aqui seu endereço">
+                        </label>
+
+                        <label for="senha" class="p23">
+                            <span>Senha:</span>
+                            <input type="password" name="senha" id="senha" readonly="true">
+                        </label>
+
+                        <input type="submit" name="enviar" id="enviar" value="ENVIAR">
+                    </form>
+                    </div>
+
+            <div id="footer">
+                <p>Projeto Realiza Digital © 2017</p>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="js/mask.js"></script>
+            <script type="text/javascript" src="js/edit_profile.js"></script>
+        </body>
+        </html>

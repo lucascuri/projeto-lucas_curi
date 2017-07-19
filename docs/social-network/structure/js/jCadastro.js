@@ -73,7 +73,7 @@ $("#formulario").on("submit", function() {
 		data: data,
 		success: function(res) {
 			alert("Cadastro realizado com sucesso!");
-			window.location = 'login.html'
+			window.location = 'login.html';
 		},
 		error: function(xhr) {
 			alert(xhr.responseJSON.error.message);

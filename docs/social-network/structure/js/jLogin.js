@@ -35,7 +35,6 @@ $("#formulario").on("submit", function() {
 		url: "http://realizadigital-api.nodo.cc/login",
 		data: data,
 		success: function(res) {
-
 			var userData = res;
 			userData.password = data.password;
 			localStorage.setItem('userData', JSON.stringify(userData));
