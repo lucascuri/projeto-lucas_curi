@@ -1,5 +1,5 @@
 	
-
+	
 	var userData = JSON.parse(localStorage.userData);
 
 	$("#nome").val(userData.first_name);
@@ -83,7 +83,14 @@
 			}
 		});
 		return false;
-	});
+
+
+			});
+
+	$('#cep').mask('99999-999');
+	$('#cpf').mask('999.999.999-99');
+
+
 
 
 
