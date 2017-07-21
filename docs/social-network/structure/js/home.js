@@ -108,7 +108,7 @@ $('body').on('click', '.icon-like', function(){
 });
 
 $('.refresh').on('click', function(){
-	location.reload();
+	loadFeeds();
 });
 
 $('.exit').on('click', function(){
