@@ -84,7 +84,6 @@ $('body').on('click', '.icon-like', function(){
 			success: function(res) {
 				var num = res.likes;
 				element.parent().find('.span-like').text(num);
-				console.log(num);
 				element.removeClass('icon-like-active');
 			}
 		});
@@ -100,7 +99,6 @@ $('body').on('click', '.icon-like', function(){
 			success: function(res) {
 				var num = res.likes;	
 				element.parent().find('.span-like').text(num);
-				console.log(num);
 				element.addClass('icon-like-active');
 			}
 		});
